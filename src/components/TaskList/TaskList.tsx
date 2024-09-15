@@ -33,7 +33,7 @@ export default function TaskList(props: TaskListProps) {
                 type='checkbox'
                 className={styles.taskCheckbox}
                 onChange={handleCheckEvent(todo.id)}
-                checked={todo.done}
+                checked={todo.done === false}
               />
               <span className={`${styles.taskName} ${!todo.done && styles.taskNameDone}`}>{todo.name}</span>
               <div className={styles.taskActions}>

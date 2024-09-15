@@ -76,10 +76,9 @@ export default function TodoList() {
   return (
     <div className={styles.todoList}>
       <div className={styles.todoListContainer}>
-        TodoList
         <TaskInput handleAddTodo={addTodo} currentTodo={currentTodo} updateTodo={updateTodo} />
         <TaskList
-          todoList={notDoneTaskList}
+          todoList={doneTaskList}
           handleCheck={handleCheck}
           startUpdateTodo={startUpdateTodo}
           removeTodo={removeTodo}
@@ -87,7 +86,7 @@ export default function TodoList() {
           Chua Hoan Thanh
         </TaskList>
         <TaskList
-          todoList={doneTaskList}
+          todoList={notDoneTaskList}
           handleCheck={handleCheck}
           startUpdateTodo={startUpdateTodo}
           removeTodo={removeTodo}

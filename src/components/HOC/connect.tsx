@@ -7,5 +7,7 @@ interface ExtraTypes {
 }
 
 export default function connect<T>(Component: React.ComponentType<T & ExtraTypes>) {
-  return (props: T) => <Component {...props} log={log} debug={debug} />
+  return function (props: Omit<T, keyof ExtraTypes>) {
+    return <Component {...(props as T)} log={log} debug={debug} />
+  }
 }
